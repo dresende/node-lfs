@@ -1,0 +1,9 @@
+{
+	"name"        : "lfs",
+	"version"     : "0.0.1",
+	"description" : "Layered file system",
+	"main"        : "lib/LFS.js",
+	"keywords"    : [ "layered", "fs" ],
+	"author"      : "Diogo Resende <dresende@thinkdigital.pt>",
+	"license"     : "MIT"
+}
