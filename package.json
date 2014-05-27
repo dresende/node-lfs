@@ -1,6 +1,6 @@
 {
 	"name"        : "lfs",
-	"version"     : "0.0.1",
+	"version"     : "0.0.2",
 	"description" : "Layered file system",
 	"main"        : "lib/LFS.js",
 	"keywords"    : [ "layered", "fs" ],

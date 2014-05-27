@@ -32,4 +32,10 @@ myfs.get("/my-file.txt", function (myfs_path) {
 });
 ```
 
-That's it!
+### Cache
+
+LFS can cache the results so the next requests under a certain period will recieve the same response. You can activate it by passing a `cache` option with a numeric value in milliseconds.
+
+```js
+var myfs = new LFS({ cache: 30000 }); // 30 seconds cache
+```
