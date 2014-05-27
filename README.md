@@ -1,4 +1,4 @@
-### NodeJS Layered File System
+## NodeJS Layered File System
 
 This is a simple module that enables you to layer several file system paths on top of each other. Every layer added will be added to the bottom, so the first layer added is the main one (and the first checked).
 
@@ -32,7 +32,15 @@ myfs.get("/my-file.txt", function (myfs_path) {
 });
 ```
 
-### Cache
+### Options
+
+Instead of calling `.add()` you can pass a list of layers in the constructor.
+
+```js
+var myfs = new LFS({ layers: [ "/my/app/public/", "/platform/common/public" ] });
+```
+
+#### Cache
 
 LFS can cache the results so the next requests under a certain period will recieve the same response. You can activate it by passing a `cache` option with a numeric value in milliseconds.
 
@@ -40,7 +48,7 @@ LFS can cache the results so the next requests under a certain period will recie
 var myfs = new LFS({ cache: 30000 }); // 30 seconds cache
 ```
 
-### Get Layer
+#### Get Layer
 
 If instead of the file path you want the layer that matches, you can pass the option in the constructor or in the method.
 
