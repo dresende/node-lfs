@@ -39,3 +39,12 @@ LFS can cache the results so the next requests under a certain period will recie
 ```js
 var myfs = new LFS({ cache: 30000 }); // 30 seconds cache
 ```
+
+### Get Layer
+
+If instead of the file path you want the layer that matches, you can pass the option in the constructor or in the method.
+
+```js
+var myfs = new LFS({ layer: true });
+myfs.get("/my-file.txt", { layer: false }); // option for this call only
+```
